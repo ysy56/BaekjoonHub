@@ -1,22 +1,15 @@
-// 문자열 char 배열로 바꾸기
-// 배열 정렬 sort() 내림차순
-// 정렬된 배열 다시 문자열로 바꾸기
-
-// result : 문자열 내림차순
-// 단, 대문자는 소문자보다 작은 것으로 간주
-
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 
 class Solution {
     public String solution(String s) {
+        StringBuilder sb = new StringBuilder();
         String answer = "";
-        char[] charArray = s.toCharArray();
-        Arrays.sort(charArray);
-        for (int i = s.length() -1 ; i >= 0 ; i--) {
-            answer += String.valueOf(charArray[i]);
+        char[] arr = s.toCharArray();
+        Arrays.sort(arr);
+        for (int i = s.length()-1; i>=0; i--) {
+            sb.append(arr[i]);
         }
-        
+        answer = sb.toString();
         return answer;
     }
 }
