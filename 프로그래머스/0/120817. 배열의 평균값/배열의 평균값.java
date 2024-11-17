@@ -1,10 +1,13 @@
 class Solution {
     public double solution(int[] numbers) {
-        int size = numbers.length;
         double answer = 0;
-        for (int number : numbers)
-            answer += number;
-        answer /= size;
+        
+        for (int i = 0; i<numbers.length; i++) {
+            answer += numbers[i];
+        }
+        
+        answer /= numbers.length;
+        
         return answer;
     }
 }
